@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.stackroute</groupId>
+	<artifactId>musixservice</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>musixservice</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+		<!--<dependency>
+            &lt;!&ndash;used to get @Entity&ndash;&gt;
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<!--because of Auto configuration spring will automatically use default configurations that are found in classpath-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<version>2.1.1.RELEASE</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.9.1</version>
+		</dependency>
+		<!---swagger2-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.6.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+<!--	<modelVersion>4.0.0</modelVersion>-->
+<!--	<parent>-->
+<!--		<groupId>org.springframework.boot</groupId>-->
+<!--		<artifactId>spring-boot-starter-parent</artifactId>-->
+<!--		<version>2.1.5.RELEASE</version>-->
+<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+<!--	</parent>-->
+<!--	<groupId>com.stackroute.musicservice</groupId>-->
+<!--	<artifactId>musicservice</artifactId>-->
+<!--	<version>0.0.1-SNAPSHOT</version>-->
+<!--	<name>musicservice</name>-->
+<!--	<description>Demo project for Spring Boot</description>-->
+
+<!--	<properties>-->
+<!--		<java.version>1.8</java.version>-->
+<!--	</properties>-->
+
+<!--	<dependencies>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-web</artifactId>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.plugin</groupId>-->
+<!--			<artifactId>spring-plugin-core</artifactId>-->
+<!--			<version>1.2.0.RELEASE</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.data</groupId>-->
+<!--			<artifactId>spring-data-jpa</artifactId>-->
+<!--			<version>2.1.7.RELEASE</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.projectlombok/lombok &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.projectlombok</groupId>-->
+<!--			<artifactId>lombok</artifactId>-->
+<!--			<version>1.18.6</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>mysql</groupId>-->
+<!--			<artifactId>mysql-connector-java</artifactId>-->
+<!--		</dependency>-->
+
+
+
+<!--		<dependency>-->
+<!--			<groupId>com.h2database</groupId>-->
+<!--			<artifactId>h2</artifactId>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-test</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/mysql/mysql-connector-java &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>mysql</groupId>-->
+<!--			<artifactId>mysql-connector-java</artifactId>-->
+<!--			<version>8.0.13</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger2</artifactId>-->
+<!--			<version>2.6.1</version>-->
+<!--			<scope>compile</scope>-->
+<!--		</dependency>-->
+
+
+
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger-ui</artifactId>-->
+<!--			<version>2.6.1</version>-->
+<!--			<scope>compile</scope>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.projectlombok</groupId>-->
+<!--			<artifactId>lombok</artifactId>-->
+<!--			<version>1.18.6</version>-->
+<!--		</dependency>-->
+
+<!--	</dependencies>-->
+
+<!--	<build>-->
+<!--		<plugins>-->
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--			</plugin>-->
+<!--		</plugins>-->
+<!--	</build>-->
+
+<!--</project>-->
+<!--&lt;!&ndash;<?xml version="1.0" encoding="UTF-8"?>&ndash;&gt;-->
+<!--&lt;!&ndash;		<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&ndash;&gt;-->
+<!--&lt;!&ndash;		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">&ndash;&gt;-->
+<!--&lt;!&ndash;<modelVersion>4.0.0</modelVersion>&ndash;&gt;-->
+<!--&lt;!&ndash;<parent>&ndash;&gt;-->
+<!--&lt;!&ndash;<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;<artifactId>spring-boot-starter-parent</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;<version>2.1.5.RELEASE</version>&ndash;&gt;-->
+<!--&lt;!&ndash;<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;</parent>&ndash;&gt;-->
+<!--&lt;!&ndash;<groupId>com.stackroute</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;<artifactId>musicservice</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;<version>0.0.1-SNAPSHOT</version>&ndash;&gt;-->
+<!--&lt;!&ndash;<name>userservice</name>&ndash;&gt;-->
+<!--&lt;!&ndash;<description>Demo project for Spring Boot</description>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<properties>&ndash;&gt;-->
+<!--&lt;!&ndash;<java.version>1.8</java.version>&ndash;&gt;-->
+<!--&lt;!&ndash;</properties>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<dependencies>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>spring-boot-starter-data-jpa</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>spring-boot-starter-integration</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>spring-boot-starter-web</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;<dependency>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<groupId>com.h2database</groupId>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<artifactId>h2</artifactId>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<scope>runtime</scope>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</dependency>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>spring-boot-starter-test</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<scope>test</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>mysql</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>mysql-connector-java</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<version>8.0.13</version>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>org.projectlombok</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>lombok</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<version>1.18.4</version>&ndash;&gt;-->
+<!--&lt;!&ndash;	<scope>provided</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;		<dependency>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;			<groupId>com.h2database</groupId>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;			<artifactId>h2</artifactId>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;			<version>1.4.197</version>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;<scope>runtime</scope>&ndash;&gt;&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>io.springfox</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>springfox-swagger2</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<version>2.9.2</version>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;	<groupId>io.springfox</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<artifactId>springfox-swagger-ui</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	<version>2.9.2</version>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;</dependencies>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<build>&ndash;&gt;-->
+<!--&lt;!&ndash;<plugins>&ndash;&gt;-->
+<!--&lt;!&ndash;	<plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;		<groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;		<artifactId>spring-boot-maven-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;	</plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;</plugins>&ndash;&gt;-->
+<!--&lt;!&ndash;</build>&ndash;&gt;-->
+
+<!--&lt;!&ndash;		</project>&ndash;&gt;-->
